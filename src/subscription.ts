@@ -11,5 +11,5 @@ export default defineGkdSubscription({
   supportUri: 'https://github.com/26142848/GKD_List_Personal/issues',
   categories,
   globalGroups,
-  apps: src/apps`),
+  apps: './src/apps`),
 });
