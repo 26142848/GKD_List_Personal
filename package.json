@@ -2,15 +2,15 @@
   "name": "@iyui/hkmxzd9290",
   "version": "0.0.1",
   "type": "module",
-  "author":"iYui",
+  "author": "iYui",
   "license": "MIT",
   "homepage": "https://github.com/26142848/GKD_List_Personal#readme",
   "bugs": {
- "url": "https://github.com/26142848/GKD_List_Personal/issues"
+    "url": "https://github.com/26142848/GKD_List_Personal/issues"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/26142848/GKD_List_Personal.git"
+    "type": "git",
+    "url": "https://github.com/26142848/GKD_List_Personal.git"
   },
   "scripts": {
     "postinstall": "simple-git-hooks",
