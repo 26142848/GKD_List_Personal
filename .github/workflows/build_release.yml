@@ -1,6 +1,11 @@
 name: build_release
 
-on: workflow_dispatch
+# 触发条件：手动触发 + main分支有推送时自动触发
+on:
+  workflow_dispatch:  # 保留手动触发选项
+  push:
+    branches:
+      - main  # 当main分支有新的推送时自动运行
 
 jobs:
   build_release:
@@ -64,3 +69,14 @@ jobs:
           node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
           pnpm publish --no-git-checks
           node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
+
+      # 自动部署到GitHub Pages
+      - name: Deploy to GitHub Pages
+        if: ${{ steps.commit.outcome == 'success' }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          keep_files: false
+          commit_message: "chore(deploy): deploy v${{ steps.version.outputs.version }}"
