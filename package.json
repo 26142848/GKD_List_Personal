@@ -2,12 +2,29 @@
   "name": "@iyui/hkmxzd9290",
   "version": "0.0.1",
   "type": "module",
+  "author":"iYui",
+  "license": "MIT",
+  "homepage": "https://github.com/26142848/GKD_List_Personal#readme",
+  "bugs": {
+ "url": "https://github.com/26142848/GKD_List_Personal/issues"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/26142848/GKD_List_Personal.git"
+  },
   "scripts": {
     "postinstall": "simple-git-hooks",
     "format": "prettier --cache --write ./**/*.{js,cjs,mjs,ts,jsx,tsx,json}",
     "lint": "eslint --cache --fix ./**/*.{js,cjs,mjs,ts,jsx,tsx}",
     "check": "tsc --noEmit && tsx ./scripts/check.ts",
     "build": "tsc --noEmit && tsx ./scripts/build.ts"
+  },
+  "gkd": {
+    "outDir": "dist",
+    "file": "26142848.json5",
+    "versionFile": "26142848.version.json5",
+    "changelog": "CHANGELOG.md",
+    "README.md": "README.md"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
