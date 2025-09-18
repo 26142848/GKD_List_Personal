@@ -1,6 +1,7 @@
 import { defineGkdSubscription } from '@gkd-kit/define';
 import categories from './categories';
 import globalGroups from './globalGroups';
+import { batchImportApps } from '@gkd-kit/tools';
 
 export default defineGkdSubscription({
   id: 2614,
@@ -11,5 +12,5 @@ export default defineGkdSubscription({
   supportUri: 'https://github.com/26142848/GKD_List_Personal/issues',
   categories,
   globalGroups,
-  apps: './src/apps`),
+  apps: await batchImportApps(`${import.meta.dirname}/apps`),
 });
