@@ -33,6 +33,7 @@ export default defineGkdApp({
           ],
           snapshotUrls: 'https://i.gkd.li/i/22414813',
         },
+        /*
         {
           key: 1,
           name: '',
@@ -40,13 +41,7 @@ export default defineGkdApp({
           matches: [''],
           snapshotUrls: '',
         },
-        {
-          key: 1,
-          name: '',
-          activityIds: [''],
-          matches: [''],
-          snapshotUrls: '',
-        },
+*/
       ],
     },
   ],
