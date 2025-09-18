@@ -12,7 +12,7 @@ export default defineGkdApp({
           key: 7,
           name: '更新提示',
           activityIds: ['me.piebridge.brevent.ui.BreventActivity'],
-          matches: ['ViewGroup[id="v_dialog"] > TextView[text^="稍后"]'],
+          matches: ['ViewGroup[id="v_dialog"] > TextView[text="稍后安装"]'],
           snapshotUrls: 'https://i.gkd.li/i/22366941',
         },
       ],
