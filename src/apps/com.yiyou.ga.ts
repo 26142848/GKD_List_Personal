@@ -25,7 +25,7 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/22414709',
         },
         {
-          key: 1,
+          key: 2,
           name: '个人界面广告',
           activityIds: ['com.yiyou.ga.client.home.HomeActivity'],
           matches: [
